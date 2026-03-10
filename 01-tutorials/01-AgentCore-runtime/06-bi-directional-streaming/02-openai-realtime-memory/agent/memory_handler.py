@@ -1,10 +1,4 @@
-from strands.experimental.bidi.agent import BidiAgent
-from strands.experimental.bidi.models.openai_realtime import BidiOpenAIRealtimeModel
 from strands.experimental.hooks.events import BidiMessageAddedEvent
-
-from bedrock_agentcore.memory import MemoryClient
-
-
 import logging
 
 

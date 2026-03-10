@@ -344,7 +344,7 @@ Examples:
         if args.runtime_arn:
             print(f"🔑 Runtime ARN: {args.runtime_arn}")
             print(f"🌍 Region: {args.region}")
-            print(f"🤖 Model: OpenAI Realtime API")
+            print("🤖 Model: OpenAI Realtime API")
             print(f"🔗 Endpoint: {args.endpoint_name}")
             print()
             print("💡 Presigned URL will be generated when you click 'Start Conversation' and expires after 5 mins")
@@ -362,7 +362,7 @@ Examples:
                 websocket_url = f"{args.ws_url}?voice_id={voice_id}"
             
             print(f"🔗 WebSocket URL: {websocket_url}")
-            print(f"🤖 Model: OpenAI Realtime API")
+            print("🤖 Model: OpenAI Realtime API")
             print(f"🎙️ Voice ID: {voice_id}")
             print("💡 Using local WebSocket connection (no authentication)")
             is_local = True

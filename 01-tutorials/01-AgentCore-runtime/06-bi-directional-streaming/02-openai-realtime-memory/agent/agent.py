@@ -4,19 +4,14 @@ Voice Agent Server - OpenAI Realtime
 """
 import sys
 import logging
-import uvicorn
 import os
-import asyncio
-import requests
 import json
-from datetime import datetime
 
 from bedrock_agentcore.memory import MemoryClient
 from bedrock_agentcore import BedrockAgentCoreApp
 
 from strands.experimental.bidi.agent import BidiAgent
 from strands.experimental.bidi.models.openai_realtime import BidiOpenAIRealtimeModel
-from strands.experimental.bidi.models.nova_sonic import BidiNovaSonicModel
 from strands.experimental.hooks.events import BidiMessageAddedEvent
 from strands_tools import calculator
 
@@ -55,7 +50,7 @@ else:
     logger.warning("No MEMORY_ID found - memory will not be used")
 openai_key = os.getenv("OPENAI_API_KEY")
 if openai_key:
-    logger.info(f"OpenAI key found.")
+    logger.info("OpenAI key found.")
 else:
     logger.error("No OpenAI key has been set.")
 
